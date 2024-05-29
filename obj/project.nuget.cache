@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wrjUWPgMAWGd3Sk0RbSFE72NtZTQuc5IVSTqdFWj0r1HTaYMGfrnV3vx6gocVbnejjAyd0p6Hoz2pH8XRNQBjQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\louag\\source\\repos\\PriceComparer\\Enquete\\Enquete\\Enquete.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\louag\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
