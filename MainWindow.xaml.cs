@@ -34,21 +34,27 @@ namespace Enquete
 
         private async void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            using (HttpClient client = new HttpClient())
+            try
             {
-                client.BaseAddress = new Uri("https://localhost:7252/Enquete/");
-                var response = await client.GetAsync("GetEnquetesAsync");
-
-                if (!response.IsSuccessStatusCode)
+                using (HttpClient client = new HttpClient())
                 {
-                    MessageBox.Show("Failed to open!");
-                    return;
-                }
+                    client.BaseAddress = new Uri("https://localhost:7252/Enquete/");
+                    var response = await client.GetAsync("GetEnquetesAsync");
 
-                var result = await response.Content.ReadAsStringAsync();
-                _enquetes = JsonConvert.DeserializeObject<List<EnqueteEntity>>(result);
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Failed to open!");
+                        return;
+                    }
+
+                    var result = await response.Content.ReadAsStringAsync();
+                    _enquetes = JsonConvert.DeserializeObject<List<EnqueteEntity>>(result);
+                }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnVerwerken_Click(object sender, RoutedEventArgs e)

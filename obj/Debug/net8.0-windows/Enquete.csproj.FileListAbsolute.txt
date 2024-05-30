@@ -21,3 +21,4 @@ C:\Users\louag\source\repos\PriceComparer\Enquete\Enquete\obj\Debug\net8.0-windo
 C:\Users\louag\source\repos\PriceComparer\Enquete\Enquete\obj\Debug\net8.0-windows\Enquete.pdb
 C:\Users\louag\source\repos\PriceComparer\Enquete\Enquete\obj\Debug\net8.0-windows\Enquete.genruntimeconfig.cache
 C:\Users\louag\source\repos\PriceComparer\Enquete\Enquete\obj\Debug\net8.0-windows\ref\Enquete.dll
+C:\Users\louag\source\repos\PriceComparer\Enquete\Enquete\obj\Debug\net8.0-windows\Enquete.sourcelink.json

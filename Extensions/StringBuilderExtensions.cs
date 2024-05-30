@@ -18,23 +18,24 @@ namespace Enquete.Extensions
             {
                 if (year < 2000)
                 {
-                    sb.AppendLine($"{year} < " +
-                                  $"{enquteArray[i, 0].ToString().PadLeft(24)} " +
-                                  $"{enquteArray[i, 1].ToString().PadLeft(10)} " +
-                                  $"{enquteArray[i, 2].ToString().PadLeft(10)}" +
-                                  $"{enquteArray[i, 3].ToString().PadLeft(10)}");
+                    AppendLine('<',enquteArray, sb, year, i);
                     year += 10;
                 }
                 else
                 {
-                    sb.AppendLine($"{year}  - " +
-                                  $"{enquteArray[i, 0].ToString().PadLeft(24)} " +
-                                  $"{enquteArray[i, 1].ToString().PadLeft(10)} " +
-                                  $"{enquteArray[i, 2].ToString().PadLeft(10)}" +
-                                  $"{enquteArray[i, 3].ToString().PadLeft(10)}");
+                    AppendLine('-', enquteArray, sb, year, i);
                 }
             }
             txt.Text = sb.ToString();
+        }
+
+        private static void AppendLine(char c,int[,] enquteArray, StringBuilder sb, int year, int i)
+        {
+            sb.AppendLine($"{year} {c} " +
+                          $"{enquteArray[i, 0].ToString().PadLeft(24)} " +
+                          $"{enquteArray[i, 1].ToString().PadLeft(10)} " +
+                          $"{enquteArray[i, 2].ToString().PadLeft(10)}" +
+                          $"{enquteArray[i, 3].ToString().PadLeft(10)}");
         }
     }
 }
